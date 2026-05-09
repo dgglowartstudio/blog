@@ -52,11 +52,36 @@ const PRODUCTS = [
 
 
 
+  {
+  id: "p2",
+  badge: "HOT PICK",
+  badgeColor: "#B86B77",
+  category: "HAIR STYLING TOOLS",
+  image: "2.png",
+  title: "Urban Yog MakeMeeBold Automatic Hair Curler",
+  description: "Create salon-style curls effortlessly at home with this automatic hair curler featuring two-way rotation, adjustable heat settings, and a safe anti-scald design.",
+  includes: [
+    "Automatic rotating curler",
+    "4 temperature settings",
+    "Two-way curling function",
+    "Anti-scald protective cover",
+    "Tangle-free curling system"
+  ],
+  whyChoose: "This curler makes hairstyling quick and beginner-friendly by automatically wrapping hair for smooth curls without tangling or burning your hands.",
+  bestFor: "Perfect for women who want fast, effortless curls at home, especially beginners and busy users looking for salon-style results in minutes.",
+  amazonLink: "https://amzn.to/3PgiRcJ",
+  pinLink: "https://in.pinterest.com/beautyarthubs/",
+  readTime: "5 min read",
+  productImage: "2.png"
+}
+
+
+
   // ✏️ NEW PRODUCT ADD કરો — EXAMPLE (comment હટાવો activate કરવા):
   //
   // {
   //   id: "p2",
-  //   badge: "NEW",
+  //   badge: "BEST SELLER",
   //   badgeColor: "#C4956A",
   //   category: "NAIL ART TOOLS",
   //   image: "product2-card.jpg",
