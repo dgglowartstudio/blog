@@ -122,6 +122,462 @@ const PRODUCTS = [
   },
 
 
+  {
+    id: "p3",
+        slug: "10-best-amazon-beauty-finds-under-2000-2026",
+            type: "multi",
+                featured: true,
+
+                    badge: "TOP 10",
+                        badgeColor: "#C4956A",
+
+                            category: "BEAUTY FINDS",
+
+                                tags: [
+                                    "amazon finds",
+                                    "beauty gadgets",
+                                    "hair styling",
+                                    "nail tools",
+                                    "skincare tools",
+                                    "viral amazon products",
+                                    "beauty under 2000"
+                                ],
+
+                                    image: "3pin.png",
+
+                                        title: "10 Best Amazon Beauty Finds Under ₹2000 (2026)",
+
+                                            description:
+    "Discover the best Amazon beauty finds under ₹2000 including hair styling tools, skincare gadgets, nail essentials, vanity accessories, and salon-style beauty products.",
+
+        readTime: "12 min read",
+
+            rating: 4.6,
+                ratingCount: 8240,
+
+                    seo: {
+        metaTitle:
+        "10 Best Amazon Beauty Finds Under ₹2000 (2026) — DG Glow Art Studio",
+
+            metaDescription:
+        "Top-rated Amazon beauty gadgets under ₹2000 including curlers, nail kits, skincare tools, vanity mirrors & salon essentials.",
+
+            keywords: [
+                "amazon beauty finds india",
+                "best beauty tools under 2000",
+                "viral amazon products",
+                "beauty gadgets india 2026",
+                "amazon finds for girls"
+            ]
+    },
+
+    pinterest: {
+        pinTitle:
+        "10 Amazon Beauty Finds Under ₹2000 Every Girl Needs ✨",
+
+            pinDescription:
+        "Affordable Amazon beauty finds that are actually worth buying 💅 Hair tools, nail kits, skincare gadgets & more! #AmazonFinds #BeautyTools #HairCare #NailArt #DGGlowArtStudio",
+
+            boardName: "Amazon Beauty Finds"
+    },
+
+    pinLink: "https://in.pinterest.com/beautyarthubs/",
+
+        intro:
+    "Amazon is full of beauty gadgets, but finding products that are affordable AND useful can be overwhelming. So we picked the best beauty finds under ₹2000 including hair styling tools, skincare rollers, nail art essentials, vanity organizers, and salon-style beauty products that are trending in 2026.",
+
+        tableColumns: ["Product", "Best For", "Price", "Rating"],
+
+            tableRows: [
+                ["Vega Instant Styler", "Hair Styling", "₹1500+", "4.3/5"],
+                ["Emigel Nail Lamp", "Gel Nails", "₹1000+", "4.4/5"],
+                ["Nestling Vanity Mirror", "Makeup Setup", "₹1800+", "4.2/5"],
+                ["Ice Roller", "Skincare", "₹500+", "4.3/5"],
+                ["Beauté Nail Kit", "Beginners", "₹1200+", "4.1/5"],
+                ["INOVERA Organizer", "Storage", "₹1500+", "4.4/5"],
+                ["Frizty Face Massager", "Face Sculpting", "₹900+", "4.2/5"],
+                ["Evercozy Heatless Curl Kit", "Heatless Curls", "₹400+", "4.1/5"],
+                ["Vega Straightener Brush", "Smooth Hair", "₹1800+", "4.3/5"],
+                ["MAYCREATE Nail Drill", "Professional Nails", "₹1700+", "4.5/5"]
+            ],
+
+                items: [
+
+                    {
+                        num: 1,
+                        title: "Vega Instant Style Hair Styler",
+                        image: "31.png",
+                        amazonLink: "https://amzn.to/4nowxip",
+                        rating: 4.3,
+                        ratingCount: 8900,
+
+                        description:
+                            "A beginner-friendly styling tool that helps create quick curls and smooth hairstyles at home.",
+
+                        includes: [
+                            "Quick heat technology",
+                            "Compact styling body",
+                            "Salon-style results",
+                            "Easy-grip handle"
+                        ],
+
+                        pros: [
+                            "Affordable",
+                            "Easy for beginners",
+                            "Quick styling"
+                        ],
+
+                        cons: [
+                            "Limited styling modes"
+                        ],
+
+                        bestFor:
+                            "Women looking for affordable everyday hairstyling.",
+
+                        cta: {
+                            buttonText: "Buy Vega Styler on Amazon →",
+                            subText: "🛒 Best Hair Styling Pick"
+                        }
+                    },
+
+                    {
+                        num: 2,
+                        title: "Emigel UV LED Nail Lamp",
+                        image: "32.png ",
+                        amazonLink: "https://amzn.to/48VcW3C",
+                        rating: 4.4,
+                        ratingCount: 2400,
+
+                        description:
+                            "A professional UV/LED lamp designed for fast gel nail polish curing at home.",
+
+                        includes: [
+                            "UV/LED curing",
+                            "Fast drying",
+                            "Portable design",
+                            "Professional nail setup"
+                        ],
+
+                        pros: [
+                            "Quick gel curing",
+                            "Compact design",
+                            "Easy to use"
+                        ],
+
+                        cons: [
+                            "Adapter quality could improve"
+                        ],
+
+                        bestFor:
+                            "Gel nail beginners and home nail artists.",
+
+                        cta: {
+                            buttonText: "Buy Nail Lamp on Amazon →",
+                            subText: "🛒 Best Nail Art Tool"
+                        }
+                    },
+
+                    {
+                        num: 3,
+                        title: "Nestling Tri-Fold Vanity Mirror",
+                        image: "33.png",
+                        amazonLink: "https://amzn.to/3PaEI5x",
+                        rating: 4.2,
+                        ratingCount: 5100,
+
+                        description:
+                            "A stylish LED vanity mirror with magnification for makeup and skincare routines.",
+
+                        includes: [
+                            "LED lighting",
+                            "Magnifying mirror",
+                            "Tri-fold design",
+                            "Adjustable stand"
+                        ],
+
+                        pros: [
+                            "Perfect makeup lighting",
+                            "Portable",
+                            "Good magnification"
+                        ],
+
+                        cons: [
+                            "Battery backup average"
+                        ],
+
+                        bestFor:
+                            "Beauty lovers creating a vanity setup.",
+
+                        cta: {
+                            buttonText: "Buy Vanity Mirror on Amazon →",
+                            subText: "🛒 Vanity Setup Essential"
+                        }
+                    },
+
+                    {
+                        num: 4,
+                        title: "Atoden Ice Roller Face Massager",
+                        image: "34.png",
+                        amazonLink: "https://amzn.to/4wnIvx5",
+                        rating: 4.3,
+                        ratingCount: 3200,
+
+                        description:
+                            "A cooling facial roller that helps reduce puffiness and refresh tired skin.",
+
+                        includes: [
+                            "Cooling roller",
+                            "Easy grip handle",
+                            "Portable skincare tool",
+                            "Anti-puffiness support"
+                        ],
+
+                        pros: [
+                            "Refreshing skincare tool",
+                            "Affordable",
+                            "Easy to use"
+                        ],
+
+                        cons: [
+                            "Cooling effect fades quickly"
+                        ],
+
+                        bestFor:
+                            "Daily skincare and face massage routines.",
+
+                        cta: {
+                            buttonText: "Buy Ice Roller on Amazon →",
+                            subText: "🛒 Viral Skincare Tool"
+                        }
+                    },
+
+                    {
+                        num: 5,
+                        title: "Beauté Secrets Manicure Pedicure Kit",
+                        image: "35.png",
+                        amazonLink: "https://amzn.to/4uaTQPu",
+                        rating: 4.1,
+                        ratingCount: 1700,
+
+                        description:
+                            "A complete manicure and pedicure kit for home nail care and grooming.",
+
+                        includes: [
+                            "Multiple nail tools",
+                            "Travel case",
+                            "Pedicure accessories",
+                            "Manicure setup"
+                        ],
+
+                        pros: [
+                            "Complete kit",
+                            "Travel friendly",
+                            "Affordable"
+                        ],
+
+                        cons: [
+                            "Some tools feel lightweight"
+                        ],
+
+                        bestFor:
+                            "At-home manicure beginners.",
+
+                        cta: {
+                            buttonText: "Buy Nail Kit on Amazon →",
+                            subText: "🛒 Best Beginner Nail Kit"
+                        }
+                    },
+
+                    {
+                        num: 6,
+                        title: "INOVERA Makeup Organizer",
+                        image: "36.png",
+                        amazonLink: "https://amzn.to/4d6jijb",
+                        rating: 4.4,
+                        ratingCount: 3900,
+
+                        description:
+                            "A multi-compartment beauty organizer perfect for storing skincare, makeup, and beauty tools.",
+
+                        includes: [
+                            "Adjustable compartments",
+                            "Large storage capacity",
+                            "Compact design",
+                            "Professional organizer"
+                        ],
+
+                        pros: [
+                            "Keeps vanity organized",
+                            "Good storage",
+                            "Durable"
+                        ],
+
+                        cons: [
+                            "Takes desk space"
+                        ],
+
+                        bestFor:
+                            "Beauty lovers with lots of products.",
+
+                        cta: {
+                            buttonText: "Buy Organizer on Amazon →",
+                            subText: "🛒 Best Vanity Organizer"
+                        }
+                    },
+
+                    {
+                        num: 7,
+                        title: "Frizty Electric Face Massager",
+                        image: "37.png",
+                        amazonLink: "https://amzn.to/4dexLbr",
+                        rating: 4.2,
+                        ratingCount: 1400,
+
+                        description:
+                            "An electric face massage tool designed for skincare absorption and facial sculpting.",
+
+                        includes: [
+                            "Electric vibration",
+                            "Portable design",
+                            "Anti-wrinkle support",
+                            "Face massage tool"
+                        ],
+
+                        pros: [
+                            "Relaxing facial massage",
+                            "Easy skincare routine",
+                            "Portable"
+                        ],
+
+                        cons: [
+                            "Battery life average"
+                        ],
+
+                        bestFor:
+                            "People interested in face sculpting tools.",
+
+                        cta: {
+                            buttonText: "Buy Face Massager on Amazon →",
+                            subText: "🛒 Trending Skincare Gadget"
+                        }
+                    },
+
+                    {
+                        num: 8,
+                        title: "Evercozy Heatless Curling Set",
+                        image: "38.png",
+                        amazonLink: "https://amzn.to/3PmYAlM",
+                        rating: 4.1,
+                        ratingCount: 1200,
+
+                        description:
+                            "A heatless curling kit that creates soft curls overnight without heat damage.",
+
+                        includes: [
+                            "Curling rod",
+                            "Hair clips",
+                            "Soft fabric material",
+                            "Overnight curl setup"
+                        ],
+
+                        pros: [
+                            "No heat damage",
+                            "Comfortable to wear",
+                            "Affordable"
+                        ],
+
+                        cons: [
+                            "Takes time for results"
+                        ],
+
+                        bestFor:
+                            "People wanting heat-free curls.",
+
+                        cta: {
+                            buttonText: "Buy Heatless Curl Kit →",
+                            subText: "🛒 Viral TikTok Hair Tool"
+                        }
+                    },
+
+                    {
+                        num: 9,
+                        title: "Vega Straightening Brush",
+                        image: "39.png",
+                        amazonLink: "https://amzn.to/4eG1SuX",
+                        rating: 4.3,
+                        ratingCount: 4600,
+
+                        description:
+                            "A heated straightening brush that smooths frizzy hair quickly while reducing styling effort.",
+
+                        includes: [
+                            "ThermoProtect technology",
+                            "Fast heating",
+                            "Temperature control",
+                            "Easy brushing system"
+                        ],
+
+                        pros: [
+                            "Quick straightening",
+                            "Easy to use",
+                            "Good for daily styling"
+                        ],
+
+                        cons: [
+                            "Not ideal for tight curls"
+                        ],
+
+                        bestFor:
+                            "Busy users wanting quick smooth hair.",
+
+                        cta: {
+                            buttonText: "Buy Straightener Brush →",
+                            subText: "🛒 Smooth Hair Essential"
+                        }
+                    },
+
+                    {
+                        num: 10,
+                        title: "MAYCREATE Professional Nail Drill",
+                        image: "40.png",
+                        amazonLink: "https://amzn.to/4nkO4rP",
+                        rating: 4.5,
+                        ratingCount: 2100,
+
+                        description:
+                            "A professional electric nail drill machine for acrylic nails, gel polish removal, and nail shaping.",
+
+                        includes: [
+                            "Adjustable speed",
+                            "Multiple drill bits",
+                            "Professional nail setup",
+                            "Compact body"
+                        ],
+
+                        pros: [
+                            "Professional results",
+                            "Powerful motor",
+                            "Great for nail art"
+                        ],
+
+                        cons: [
+                            "Requires practice for beginners"
+                        ],
+
+                        bestFor:
+                            "Advanced nail art users and DIY nail lovers.",
+
+                        cta: {
+                            buttonText: "Buy Nail Drill on Amazon →",
+                            subText: "🛒 Professional Nail Tool"
+                        }
+                    }
+
+                ]
+}
+
+
+  
   // ════════════════════════════════════════════════════════
   //  PRODUCT 3 — આગળ add કરો (single OR multi)
   // ════════════════════════════════════════════════════════
