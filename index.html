@@ -968,66 +968,203 @@
       });
     }
 
-    // ─── OPEN POST ──────────────────────────────────────────────
-    function openPost(id) {
-      const p = PRODUCTS.find(function (x) { return x.id === id; });
-      if (!p) return;
+   // ─── OPEN POST ─────────────────────────────
+function openPost(id) {
 
-      // Build includes chips
+  const p = PRODUCTS.find(function (x) {
+    return x.id === id;
+  });
+
+  if (!p) return;
+
+  let html =
+    '<div class="post-breadcrumb">' +
+    '<a href="#" onclick="showBlog();return false;">Home</a> › ' +
+    esc(p.category || 'Products') +
+    '</div>';
+
+  // SINGLE OR MULTI
+  if (p.type === 'multi') {
+    html += renderMultiPost(p);
+  } else {
+    html += renderSinglePost(p);
+  }
+
+  // Pinterest Banner
+  html +=
+    '<div class="pin-banner">' +
+    '<div><strong>Love this product?</strong><p>Save it to your Pinterest board and come back anytime!</p></div>' +
+    '<a href="' + esc(p.pinLink || 'https://in.pinterest.com/beautyarthubs/') + '" target="_blank" class="pin-btn-w">' +
+    '<span style="font-weight:800;font-size:14px;">P</span> Save to Pinterest' +
+    '</a>' +
+    '</div>';
+
+  document.getElementById('postContent').innerHTML = html;
+
+  document.getElementById('page-blog').classList.remove('active');
+
+  document.getElementById('page-post').classList.add('active');
+
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+}
+
+
+// ─── SINGLE PRODUCT ───────────────────────
+function renderSinglePost(p) {
+
+  let chips = '';
+
+  if (p.includes && p.includes.length) {
+    p.includes.forEach(function (item) {
+      chips += '<div class="benefit-chip">' + esc(item) + '</div>';
+    });
+  }
+
+  return (
+
+    '<div class="product-detail">' +
+
+    '<div class="pd-header">' +
+
+    (p.category
+      ? '<div class="pd-cat">' + esc(p.category) + '</div>'
+      : '') +
+
+    '<div class="pd-title">' + esc(p.title) + '</div>' +
+
+    '</div>' +
+
+    '<div class="pd-body">' +
+
+    (p.productImage
+      ? '<img src="' + esc(p.productImage) + '" alt="' + esc(p.title) + '" class="pd-img" onerror="this.style.display=\'none\'">'
+      : '') +
+
+    '<p class="pd-desc">' + esc(p.description) + '</p>' +
+
+    (chips
+      ? '<div class="pd-includes-title">What\'s Included</div><div class="benefits-grid">' + chips + '</div>'
+      : '') +
+
+    (p.whyChoose
+      ? '<div class="why-box"><h4>Why Choose This?</h4><p>' + esc(p.whyChoose) + '</p></div>'
+      : '') +
+
+    (p.bestFor
+      ? '<div class="best-for-box"><strong>💖 Best For</strong><br>' + esc(p.bestFor) + '</div>'
+      : '') +
+
+    '<div class="amz-cta">' +
+
+    '<div class="amz-cta-left">' +
+    '<p>🛒 Get This Today</p>' +
+    '<h4>Discover your new favorite beauty essential 🌸</h4>' +
+    '</div>' +
+
+    '<a href="' + esc(p.amazonLink || '#') + '" class="amz-btn-white" target="_blank">' +
+    'Check on Amazon →' +
+    '</a>' +
+
+    '</div>' +
+
+    '</div>' +
+    '</div>'
+  );
+}
+
+
+// ─── MULTI PRODUCT ───────────────────────
+function renderMultiPost(p) {
+
+  let html = '';
+
+  // INTRO BOX
+  html +=
+
+    '<div class="product-detail">' +
+
+    '<div class="pd-header">' +
+
+    (p.category
+      ? '<div class="pd-cat">' + esc(p.category) + '</div>'
+      : '') +
+
+    '<div class="pd-title">' + esc(p.title) + '</div>' +
+
+    '</div>' +
+
+    '<div class="pd-body">' +
+
+    '<p class="pd-desc">' + esc(p.intro || '') + '</p>' +
+
+    '</div>' +
+
+    '</div>';
+
+  // ITEMS
+  if (p.items && p.items.length) {
+
+    p.items.forEach(function (item) {
+
       let chips = '';
-      if (p.includes && p.includes.length) {
-        p.includes.forEach(function (item) {
-          chips += '<div class="benefit-chip">' + esc(item) + '</div>';
+
+      if (item.includes && item.includes.length) {
+        item.includes.forEach(function (inc) {
+          chips += '<div class="benefit-chip">' + esc(inc) + '</div>';
         });
       }
 
-      const html =
-        '<div class="post-breadcrumb">' +
-        '<a href="#" onclick="showBlog();return false;">Home</a> › ' + esc(p.category || 'Products') +
-        '</div>' +
+      html +=
 
-        '<div class="product-detail">' +
+        '<div class="product-detail" style="margin-bottom:1.5rem">' +
+
         '<div class="pd-header">' +
-        (p.category ? '<div class="pd-cat">' + esc(p.category) + '</div>' : '') +
-        '<div class="pd-title">' + esc(p.title) + '</div>' +
+
+        '<div class="pd-title">' + esc(item.title) + '</div>' +
+
         '</div>' +
+
         '<div class="pd-body">' +
-        (p.productImage ? '<img src="' + esc(p.productImage) + '" alt="' + esc(p.title) + '" class="pd-img" onerror="this.style.display=\'none\'">' : '') +
-        '<p class="pd-desc">' + esc(p.description) + '</p>' +
 
-        (chips ? '<div class="pd-includes-title">What\'s Included</div><div class="benefits-grid">' + chips + '</div>' : '') +
-
-        (p.whyChoose ?
-          '<div class="why-box"><h4>Why Choose This?</h4><p>' + esc(p.whyChoose) + '</p></div>'
+        (item.image
+          ? '<img src="' + esc(item.image) + '" alt="' + esc(item.title) + '" class="pd-img" onerror="this.style.display=\'none\'">'
           : '') +
 
-        (p.bestFor ?
-          '<div class="best-for-box"><strong>💖 Best For</strong><br>' + esc(p.bestFor) + '</div>'
+        '<p class="pd-desc">' + esc(item.description) + '</p>' +
+
+        (chips
+          ? '<div class="pd-includes-title">What\'s Included</div><div class="benefits-grid">' + chips + '</div>'
+          : '') +
+
+        (item.bestFor
+          ? '<div class="best-for-box"><strong>💖 Best For</strong><br>' + esc(item.bestFor) + '</div>'
           : '') +
 
         '<div class="amz-cta">' +
+
         '<div class="amz-cta-left">' +
-        '<p>🛒 Get This Today</p>' +
-        '<h4>Discover your new favorite beauty essential 🌸</h4>' +
-        '</div>' +
-        '<a href="' + esc(p.amazonLink || '#') + '" class="amz-btn-white" target="_blank">Check on Amazon →</a>' +
-        '</div>' +
-        '</div>' +
+        '<p>🛒 Check on Amazon</p>' +
+        '<h4>' + esc(item.title) + '</h4>' +
         '</div>' +
 
-        '<div class="pin-banner">' +
-        '<div><strong>Love this product?</strong><p>Save it to your Pinterest board and come back anytime!</p></div>' +
-        '<a href="' + esc(p.pinLink || 'https://in.pinterest.com/beautyarthubs/') + '" target="_blank" class="pin-btn-w">' +
-        '<span style="font-weight:800;font-size:14px;">P</span> Save to Pinterest' +
+        '<a href="' + esc(item.amazonLink || '#') + '" class="amz-btn-white" target="_blank">' +
+        'Buy Now →' +
         '</a>' +
+
+        '</div>' +
+
+        '</div>' +
         '</div>';
 
-      document.getElementById('postContent').innerHTML = html;
-      document.getElementById('page-blog').classList.remove('active');
-      document.getElementById('page-post').classList.add('active');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
+    });
 
+  }
+
+  return html;
+}
     // ─── BACK TO BLOG ────────────────────────────────────────────
     function showBlog() {
       document.getElementById('page-post').classList.remove('active');
