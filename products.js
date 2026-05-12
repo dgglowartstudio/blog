@@ -143,7 +143,7 @@ const PRODUCTS = [
                                     "beauty under 2000"
                                 ],
 
-                                    image: "3.png",
+                                    image: "10all.png",
 
                                         title: "10 Best Amazon Beauty Finds Under ₹2000 (2026)",
 
