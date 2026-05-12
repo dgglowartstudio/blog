@@ -1104,6 +1104,60 @@ function renderMultiPost(p) {
 
     '</div>';
 
+// COMPARISON TABLE
+if (p.tableColumns && p.tableRows) {
+
+  html +=
+
+    '<div class="why-box">' +
+
+    '<h4>📊 Quick Comparison</h4>' +
+
+    '<div style="overflow-x:auto">' +
+
+    '<table style="width:100%;border-collapse:collapse;background:#fff">' +
+
+    '<thead><tr>';
+
+  p.tableColumns.forEach(function (col) {
+
+    html +=
+      '<th style="padding:12px;border:1px solid #eee;background:#FBF0F3;text-align:left">' +
+      esc(col) +
+      '</th>';
+
+  });
+
+  html += '</tr></thead><tbody>';
+
+  p.tableRows.forEach(function (row) {
+
+    html += '<tr>';
+
+    row.forEach(function (cell) {
+
+      html +=
+        '<td style="padding:12px;border:1px solid #eee">' +
+        esc(cell) +
+        '</td>';
+
+    });
+
+    html += '</tr>';
+
+  });
+
+  html +=
+
+    '</tbody>' +
+
+    '</table>' +
+
+    '</div>' +
+
+    '</div>';
+}
+  
   // ITEMS
   if (p.items && p.items.length) {
 
